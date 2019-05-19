@@ -1,8 +1,10 @@
-import {BackendEndpointsUrl} from './backend_endpoints_urls.js';
-import {ToTheBackend} from './ToTheBackend.js';
+import BackendEndpointsUrl from './backend_endpoints_urls.js'
+import ToTheBackend from './ToTheBackend.js'
 
-export default {
-	getMyBusinessObject(){
-		return ToTheBackend().doGet(BackendEndpointsUrl().myBusinessObject);
+var MyBusinessObject = {
+  getMyBusinessObject(){
+    return ToTheBackend.doGet(BackendEndpointsUrl.myOtherBusinessObject)
 	}
-};
+}
+
+export default MyBusinessObject

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import MyBusinessObjectService from '../services/MyBusinessObject.service.js';
+import MyBusinessObjectService from '../services/MyBusinessObject.service.js'
 import MyOtherBusinessObjectService from '../services/MyOtherBusinessObject.service.js';
 
 export default {
@@ -18,54 +18,36 @@ export default {
   },
   data: function () {
     return {
-		myHttpResponse:''
-	};
+      myHttpResponse: ''
+    }
   },
   methods: {
-    loadMyObjectBusinessThroughHttpRequest: function (event) {
+    loadMyObjectBusinessThroughHttpRequest: function () {
 		var that = this;
 		MyBusinessObjectService.getMyBusinessObject()
 		.then(function (response) {
-			that.$data.myHttpResponse = response;
+			that.$data.myHttpResponse = response
 		})
 		.catch(function (error) {
-			that.$data.myHttpResponse = error;
+			that.$data.myHttpResponse = error
 		})
 		.then(function () {
 			// always executed
-		});
+		})
     },
-	loadMyOtherObjectBusinessThroughHttpRequest: function (event) {
+	loadMyOtherObjectBusinessThroughHttpRequest: function () {
 		var that = this;
 		MyOtherBusinessObjectService.getMyOtherBusinessObject()
 		.then(function (response) {
-			that.$data.myHttpResponse = response;
+			that.$data.myHttpResponse = response
 		})
 		.catch(function (error) {
-			that.$data.myHttpResponse = error;
+			that.$data.myHttpResponse = error
 		})
 		.then(function () {
 			// always executed
-		});
+		})
     },
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>

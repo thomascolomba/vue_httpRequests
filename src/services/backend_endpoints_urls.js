@@ -1,7 +1,6 @@
-
-export function BackendEndpointsUrl() {
-  return {
-	'myBusinessObject':'myURLToTheBackendController',
+var BackendEndpointsUrl = {
+  'myBusinessObject':'myURLToTheBackendController',
 	'myOtherBusinessObject':'myURLToAnotherBackendController'
-  };
 }
+
+export default BackendEndpointsUrl
